@@ -11,12 +11,14 @@ SOURCES += main.cpp \
     blockgroup.cpp \
     block.cpp \
     mainwindow.cpp \
-    blockcontainer.cpp
+    blockcontainer.cpp \
+    blockrandom.cpp
 HEADERS += client.h \
     server.h \
     board.h \
     blockgroup.h \
     block.h \
     mainwindow.h \
-    blockcontainer.h
+    blockcontainer.h \
+    blockrandom.h
 FORMS += mainwindow.ui

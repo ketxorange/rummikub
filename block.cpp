@@ -1,8 +1,11 @@
 #include "block.h"
 
-Block::Block(int val, blockColor col, BlockContainer *bParent=NULL):value(val), color(col), blockParent(bParent)
+Block::Block(int val, blockColor col, BlockContainer *bParent=NULL, bool jocker = false ):value(val), color(col), blockParent(bParent), isJocker(jocker)
 {
 }
+
+
+
 
 blockColor Block::getColor()
 {

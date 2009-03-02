@@ -20,7 +20,7 @@ class Block : public QObject
 {
     Q_OBJECT
 public:
-    Block(int, blockColor, BlockContainer *);
+    Block(int, blockColor, BlockContainer *, bool);
     int getValue();
     blockColor getColor();
 
@@ -32,6 +32,7 @@ private:
     blockColor color;
 
     BlockContainer *blockParent;
+    bool isJocker;
 
 
 };
