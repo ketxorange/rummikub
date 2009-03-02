@@ -24,5 +24,5 @@ void Block::move(BlockContainer *newParent)
 
 bool Block::operator<(Block & b1)
 {
-    return getValue() < b1.getValue();
+    return (getColor() <= b1.getColor()) && (getValue() < b1.getValue());
 }
