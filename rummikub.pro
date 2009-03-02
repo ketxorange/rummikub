@@ -5,16 +5,18 @@ QT += network
 TARGET = rummikub
 TEMPLATE = app
 SOURCES += main.cpp \
-    mainwindow.cpp \
     client.cpp \
     server.cpp \
     board.cpp \
     blockgroup.cpp \
-    block.cpp
-HEADERS += mainwindow.h \
-    client.h \
+    block.cpp \
+    mainwindow.cpp \
+    blockcontainer.cpp
+HEADERS += client.h \
     server.h \
     board.h \
     blockgroup.h \
-    block.h
+    block.h \
+    mainwindow.h \
+    blockcontainer.h
 FORMS += mainwindow.ui

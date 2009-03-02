@@ -2,11 +2,19 @@
 #define BLOCKGROUP_H
 
 #include <QObject>
+#include <QList>
+#include <QListIterator>
 
-class BlockGroup : public QObject
+#include "blockcontainer.h"
+#include "block.h"
+
+class BlockGroup : public BlockContainer
 {
+    Q_OBJECT
 public:
     BlockGroup();
+    bool isValid();
+
 };
 
 #endif // BLOCKGROUP_H

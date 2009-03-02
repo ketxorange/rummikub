@@ -17,14 +17,14 @@ public:
     ~MainWindow();
 
 public slots:
-    void startServer();
+/*    void startServer();
     void stopServer();\
 
     void print(const QString & message);
 
 signals:
     void sendToAll(const QString & message);
-
+*/
 private:
     Ui::MainWindowClass *ui;
 };
