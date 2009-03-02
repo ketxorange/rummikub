@@ -13,6 +13,7 @@ class BlockContainer : public QObject
     Q_OBJECT
 public:
     BlockContainer();
+    ~BlockContainer();
 
 public slots:
     void add(Block*);

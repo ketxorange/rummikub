@@ -1,6 +1,6 @@
 #include "block.h"
 
-Block::Block(int val, blockColor col, BlockContainer *bParent=NULL, bool jocker = false ):value(val), color(col), blockParent(bParent), isJocker(jocker)
+Block::Block(int val, blockColor col, BlockContainer *bParent, bool jocker):value(val), color(col), blockParent(bParent), isJocker(jocker)
 {
 }
 
@@ -22,10 +22,14 @@ void Block::move(BlockContainer *newParent)
     if(blockParent!=NULL)
         blockParent->remove(this);
     newParent->add(this);
-    blockParent=newParent;
 }
 
 bool Block::operator<(Block & b1)
 {
     return (getColor() <= b1.getColor()) && (getValue() < b1.getValue());
+}
+
+void Block::setBlockParent(BlockContainer *bp)
+{
+    this->blockParent=bp;
 }

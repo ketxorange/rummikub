@@ -4,6 +4,15 @@ BlockContainer::BlockContainer()
 {
 }
 
+BlockContainer::~BlockContainer()
+{
+    QList<Block*>::Iterator it = blockList.begin();
+    while(it != blockList.end())
+    {
+        delete *it;
+    }
+}
+
 void BlockContainer::add(Block *b)
 {
     QList<Block*>::Iterator it=blockList.begin();
@@ -14,11 +23,13 @@ void BlockContainer::add(Block *b)
         else
             break;
     }
+    b->setBlockParent(this);
     blockList.insert(it, b);
 }
 
 void BlockContainer::remove(Block *b)
 {
+    b->setBlockParent(NULL);
     blockList.removeOne(b);
 }
 

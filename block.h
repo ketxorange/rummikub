@@ -27,6 +27,8 @@ public:
     void move(BlockContainer *);
     bool operator<(Block &);
 
+    void setBlockParent(BlockContainer *);
+
 private:
     int value;
     blockColor color;
