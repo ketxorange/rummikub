@@ -4,19 +4,24 @@ Block::Block(int val, blockColor col, BlockContainer *bParent, bool jocker):valu
 {
 }
 
-
-
-
+/**
+  returns color of the Block
+  */
 blockColor Block::getColor()
 {
     return color;
 }
 
+/**
+  returns value on the Block
+  */
 int Block::getValue()
 {
     return value;
 }
-
+/**
+  moves block (removing it from previous group) to new group
+  */
 void Block::move(BlockContainer *newParent)
 {
     if(blockParent!=NULL)
@@ -24,11 +29,17 @@ void Block::move(BlockContainer *newParent)
     newParent->add(this);
 }
 
+/**
+  used to sort blocks in groups which are auto sorted
+  */
 bool Block::operator<(Block & b1)
 {
-    return (getColor() <= b1.getColor()) && (getValue() < b1.getValue());
+    return (getColor() == b1.getColor()) && (getValue() < b1.getValue());
 }
 
+/**
+  accessor used to set block parent
+  */
 void Block::setBlockParent(BlockContainer *bp)
 {
     this->blockParent=bp;

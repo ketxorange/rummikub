@@ -55,6 +55,71 @@
   <variable>buildconfiguration-Debug-buildstep1</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ZZ4jRKIv4c,guid=09007644c9644e1685bf907f49abb1ef</value>
+    <value type="QString" >DESKTOP_SESSION=default</value>
+    <value type="QString" >DESKTOP_STARTUP_ID=</value>
+    <value type="QString" >DISPLAY=:0</value>
+    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
+    <value type="QString" >GS_LIB=/home/orbit/.fonts</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/orbit/.gtkrc-2.0::/home/orbit/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/orbit/.gtkrc::/home/orbit/.kde4/share/config/gtkrc</value>
+    <value type="QString" >G_BROKEN_FILENAMES=1</value>
+    <value type="QString" >HISTCONTROL=erasedups</value>
+    <value type="QString" >HISTSIZE=1000</value>
+    <value type="QString" >HOME=/home/orbit</value>
+    <value type="QString" >INPUTRC=/etc/inputrc</value>
+    <value type="QString" >J2REDIR=/usr/lib/jvm/java-1.6.0-openjdk/jre</value>
+    <value type="QString" >J2SDKDIR=/usr/lib/jvm/java-1.6.0-openjdk</value>
+    <value type="QString" >JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk</value>
+    <value type="QString" >KDEDIRS=/usr:/opt/kde</value>
+    <value type="QString" >KDE_FULL_SESSION=true</value>
+    <value type="QString" >KDE_MULTIHEAD=false</value>
+    <value type="QString" >KDE_SESSION_UID=1000</value>
+    <value type="QString" >KDE_SESSION_VERSION=4</value>
+    <value type="QString" >LANG=pl_PL.utf8</value>
+    <value type="QString" >LANGUAGE=</value>
+    <value type="QString" >LC_COLLATE=C</value>
+    <value type="QString" >LESS=-R</value>
+    <value type="QString" >LOGNAME=orbit</value>
+    <value type="QString" >MALLOC_CHECK_=2</value>
+    <value type="QString" >MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins:/opt/mozilla/lib/plugins</value>
+    <value type="QString" >NXDIR=/opt/NX</value>
+    <value type="QString" >OOO_FORCE_DESKTOP=gnome</value>
+    <value type="QString" >PATH=/usr/bin:/bin:/usr/bin:/sbin:/usr/sbin:/opt/kde/bin:/usr/share/netbeans/bin/:/opt/NX/bin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/bin/perlbin/core:/opt/qt/bin:/home/orbit/bin</value>
+    <value type="QString" >PKG_CONFIG_PATH=/usr/lib/pkgconfig:/opt/kde/lib/pkgconfig:/opt/qt/lib/pkgconfig</value>
+    <value type="QString" >PS3=> </value>
+    <value type="QString" >PS4=+ </value>
+    <value type="QString" >PWD=/home/orbit</value>
+    <value type="QString" >QTDIR=/usr</value>
+    <value type="QString" >QT_PLUGIN_PATH=/home/orbit/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
+    <value type="QString" >QT_XFT=true</value>
+    <value type="QString" >SESSION_MANAGER=local/0r81t:@/tmp/.ICE-unix/6265,unix/0r81t:/tmp/.ICE-unix/6265</value>
+    <value type="QString" >SHELL=/bin/bash</value>
+    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >USER=orbit</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XCURSOR_THEME=Oxygen_Blue</value>
+    <value type="QString" >XDG_CACHE_HOME=/home/orbit/.cache</value>
+    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg:/opt/kde/etc/xdg</value>
+    <value type="QString" >XDG_CONFIG_HOME=/home/orbit/.config</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/opt/kde/share</value>
+    <value type="QString" >XDG_DATA_HOME=/home/orbit/.local/share</value>
+    <value type="QString" >XDG_SESSION_COOKIE=cf75d6f8184dcfba2760554648932dd5-1235988974.730424-1310032268</value>
+    <value type="QString" >XDM_MANAGED=method=classic</value>
+    <value type="QString" >_=/usr/bin/kdeinit4</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >/home/orbit/rummikub/rummikub.pro</value>
+    <value type="QString" >-spec</value>
+    <value type="QString" >/usr/share/qt/mkspecs/linux-g++-64</value>
+    <value type="QString" >-r</value>
+    <value type="QString" >CONFIG+=debug_and_release</value>
+    <value type="QString" >CONFIG+=debug</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/qmake</value>
+   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/orbit/rummikub</value>
    <value key="buildConfiguration" type="int" >10</value>
   </valuemap>
  </data>
@@ -62,6 +127,67 @@
   <variable>buildconfiguration-Debug-buildstep2</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ZZ4jRKIv4c,guid=09007644c9644e1685bf907f49abb1ef</value>
+    <value type="QString" >DESKTOP_SESSION=default</value>
+    <value type="QString" >DESKTOP_STARTUP_ID=</value>
+    <value type="QString" >DISPLAY=:0</value>
+    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
+    <value type="QString" >GS_LIB=/home/orbit/.fonts</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/orbit/.gtkrc-2.0::/home/orbit/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/orbit/.gtkrc::/home/orbit/.kde4/share/config/gtkrc</value>
+    <value type="QString" >G_BROKEN_FILENAMES=1</value>
+    <value type="QString" >HISTCONTROL=erasedups</value>
+    <value type="QString" >HISTSIZE=1000</value>
+    <value type="QString" >HOME=/home/orbit</value>
+    <value type="QString" >INPUTRC=/etc/inputrc</value>
+    <value type="QString" >J2REDIR=/usr/lib/jvm/java-1.6.0-openjdk/jre</value>
+    <value type="QString" >J2SDKDIR=/usr/lib/jvm/java-1.6.0-openjdk</value>
+    <value type="QString" >JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk</value>
+    <value type="QString" >KDEDIRS=/usr:/opt/kde</value>
+    <value type="QString" >KDE_FULL_SESSION=true</value>
+    <value type="QString" >KDE_MULTIHEAD=false</value>
+    <value type="QString" >KDE_SESSION_UID=1000</value>
+    <value type="QString" >KDE_SESSION_VERSION=4</value>
+    <value type="QString" >LANG=pl_PL.utf8</value>
+    <value type="QString" >LANGUAGE=</value>
+    <value type="QString" >LC_COLLATE=C</value>
+    <value type="QString" >LESS=-R</value>
+    <value type="QString" >LOGNAME=orbit</value>
+    <value type="QString" >MALLOC_CHECK_=2</value>
+    <value type="QString" >MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins:/opt/mozilla/lib/plugins</value>
+    <value type="QString" >NXDIR=/opt/NX</value>
+    <value type="QString" >OOO_FORCE_DESKTOP=gnome</value>
+    <value type="QString" >PATH=/usr/bin:/bin:/usr/bin:/sbin:/usr/sbin:/opt/kde/bin:/usr/share/netbeans/bin/:/opt/NX/bin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/bin/perlbin/core:/opt/qt/bin:/home/orbit/bin</value>
+    <value type="QString" >PKG_CONFIG_PATH=/usr/lib/pkgconfig:/opt/kde/lib/pkgconfig:/opt/qt/lib/pkgconfig</value>
+    <value type="QString" >PS3=> </value>
+    <value type="QString" >PS4=+ </value>
+    <value type="QString" >PWD=/home/orbit</value>
+    <value type="QString" >QTDIR=/usr</value>
+    <value type="QString" >QT_PLUGIN_PATH=/home/orbit/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
+    <value type="QString" >QT_XFT=true</value>
+    <value type="QString" >SESSION_MANAGER=local/0r81t:@/tmp/.ICE-unix/6265,unix/0r81t:/tmp/.ICE-unix/6265</value>
+    <value type="QString" >SHELL=/bin/bash</value>
+    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >USER=orbit</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XCURSOR_THEME=Oxygen_Blue</value>
+    <value type="QString" >XDG_CACHE_HOME=/home/orbit/.cache</value>
+    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg:/opt/kde/etc/xdg</value>
+    <value type="QString" >XDG_CONFIG_HOME=/home/orbit/.config</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/opt/kde/share</value>
+    <value type="QString" >XDG_DATA_HOME=/home/orbit/.local/share</value>
+    <value type="QString" >XDG_SESSION_COOKIE=cf75d6f8184dcfba2760554648932dd5-1235988974.730424-1310032268</value>
+    <value type="QString" >XDM_MANAGED=method=classic</value>
+    <value type="QString" >_=/usr/bin/kdeinit4</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >debug</value>
+    <value type="QString" >-w</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/orbit/rummikub</value>
    <valuelist key="makeargs" type="QVariantList" >
     <value type="QString" >debug</value>
    </valuelist>
@@ -71,6 +197,67 @@
   <variable>buildconfiguration-Debug-cleanstep0</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ZZ4jRKIv4c,guid=09007644c9644e1685bf907f49abb1ef</value>
+    <value type="QString" >DESKTOP_SESSION=default</value>
+    <value type="QString" >DESKTOP_STARTUP_ID=</value>
+    <value type="QString" >DISPLAY=:0</value>
+    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
+    <value type="QString" >GS_LIB=/home/orbit/.fonts</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/orbit/.gtkrc-2.0::/home/orbit/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/orbit/.gtkrc::/home/orbit/.kde4/share/config/gtkrc</value>
+    <value type="QString" >G_BROKEN_FILENAMES=1</value>
+    <value type="QString" >HISTCONTROL=erasedups</value>
+    <value type="QString" >HISTSIZE=1000</value>
+    <value type="QString" >HOME=/home/orbit</value>
+    <value type="QString" >INPUTRC=/etc/inputrc</value>
+    <value type="QString" >J2REDIR=/usr/lib/jvm/java-1.6.0-openjdk/jre</value>
+    <value type="QString" >J2SDKDIR=/usr/lib/jvm/java-1.6.0-openjdk</value>
+    <value type="QString" >JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk</value>
+    <value type="QString" >KDEDIRS=/usr:/opt/kde</value>
+    <value type="QString" >KDE_FULL_SESSION=true</value>
+    <value type="QString" >KDE_MULTIHEAD=false</value>
+    <value type="QString" >KDE_SESSION_UID=1000</value>
+    <value type="QString" >KDE_SESSION_VERSION=4</value>
+    <value type="QString" >LANG=pl_PL.utf8</value>
+    <value type="QString" >LANGUAGE=</value>
+    <value type="QString" >LC_COLLATE=C</value>
+    <value type="QString" >LESS=-R</value>
+    <value type="QString" >LOGNAME=orbit</value>
+    <value type="QString" >MALLOC_CHECK_=2</value>
+    <value type="QString" >MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins:/opt/mozilla/lib/plugins</value>
+    <value type="QString" >NXDIR=/opt/NX</value>
+    <value type="QString" >OOO_FORCE_DESKTOP=gnome</value>
+    <value type="QString" >PATH=/usr/bin:/bin:/usr/bin:/sbin:/usr/sbin:/opt/kde/bin:/usr/share/netbeans/bin/:/opt/NX/bin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/bin/perlbin/core:/opt/qt/bin:/home/orbit/bin</value>
+    <value type="QString" >PKG_CONFIG_PATH=/usr/lib/pkgconfig:/opt/kde/lib/pkgconfig:/opt/qt/lib/pkgconfig</value>
+    <value type="QString" >PS3=> </value>
+    <value type="QString" >PS4=+ </value>
+    <value type="QString" >PWD=/home/orbit</value>
+    <value type="QString" >QTDIR=/usr</value>
+    <value type="QString" >QT_PLUGIN_PATH=/home/orbit/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
+    <value type="QString" >QT_XFT=true</value>
+    <value type="QString" >SESSION_MANAGER=local/0r81t:@/tmp/.ICE-unix/6265,unix/0r81t:/tmp/.ICE-unix/6265</value>
+    <value type="QString" >SHELL=/bin/bash</value>
+    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >USER=orbit</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XCURSOR_THEME=Oxygen_Blue</value>
+    <value type="QString" >XDG_CACHE_HOME=/home/orbit/.cache</value>
+    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg:/opt/kde/etc/xdg</value>
+    <value type="QString" >XDG_CONFIG_HOME=/home/orbit/.config</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/opt/kde/share</value>
+    <value type="QString" >XDG_DATA_HOME=/home/orbit/.local/share</value>
+    <value type="QString" >XDG_SESSION_COOKIE=cf75d6f8184dcfba2760554648932dd5-1235988974.730424-1310032268</value>
+    <value type="QString" >XDM_MANAGED=method=classic</value>
+    <value type="QString" >_=/usr/bin/kdeinit4</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >clean</value>
+    <value type="QString" >-w</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/orbit/rummikub</value>
   </valuemap>
  </data>
  <data>

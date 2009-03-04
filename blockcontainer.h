@@ -5,6 +5,7 @@
 #include <QList>
 #include <QListIterator>
 #include "block.h"
+#include <QDebug>
 
 class Block;
 
@@ -19,7 +20,10 @@ public slots:
     void add(Block*);
     void remove(Block*);
     void moveTo(BlockContainer*, Block*);
+    void moveTo(BlockContainer*, int);
+    bool isEmpty();
 
+    void debugPrint();
 protected:
     QList<Block*> blockList;
 };
