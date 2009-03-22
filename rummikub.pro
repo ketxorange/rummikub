@@ -10,11 +10,13 @@ SOURCES += main.cpp \
     server.cpp \
     board.cpp \
     blockgroup.cpp \
-    block.cpp
+    block.cpp \
+    serverconnectionthread.cpp
 HEADERS += mainwindow.h \
     client.h \
     server.h \
     board.h \
     blockgroup.h \
-    block.h
+    block.h \
+    serverconnectionthread.h
 FORMS += mainwindow.ui

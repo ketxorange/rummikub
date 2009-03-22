@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
     QTextEdit * console = new QTextEdit(this);
     this->setCentralWidget(console);
     connect(server, SIGNAL(error(QString)), console, SLOT(append(QString)));
-    server->start();
 }
 
 MainWindow::~MainWindow()
