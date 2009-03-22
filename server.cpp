@@ -7,13 +7,26 @@
 #include <QTcpSocket>
 
 Server::Server(QObject * parent, int port)
-        : QTcpServer(parent)
+        : QTcpServer(parent), port(port)
+{}
+
+Server::~Server()
+{
+    this->stop();
+}
+
+void Server::start()
 {
     if(! listen(QHostAddress::Any, port))
     {
         emit error("Can't start Server");
     }
 }
+
+void Server::stop()
+{ // to be written
+}
+
 
 void Server::incomingConnection(int handle)
 {

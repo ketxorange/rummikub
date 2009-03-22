@@ -1,7 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QtGui/QMainWindow>
+#include <QMainWindow>
+
+class Server;
+class QTextEdit;
 
 namespace Ui
 {
@@ -27,7 +30,8 @@ signals:
 
 private:
     Ui::MainWindowClass *ui;
-    
+    Server * server;
+    QTextEdit * console;
 };
 
 #endif // MAINWINDOW_H
