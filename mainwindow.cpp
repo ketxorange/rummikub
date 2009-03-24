@@ -4,11 +4,18 @@
 #include "ui_mainwindow.h"
 
 #include <QTextEdit>
+#include <QMenuBar>
+#include <QMenu>
+#include <QAction>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindowClass), server(NULL)
 {
     //ui->setupUi(this);
+    QMenuBar * bar = this->menuBar();
+    QMenu * menuServer = bar->addMenu("Server");
+    menuServer->addAction("Start Server", this, SLOT(startServer()));
+    menuServer->addAction("Stop Server", this, SLOT(stopServer()));
     console = new QTextEdit(this);
     this->setCentralWidget(console);
 }
@@ -26,7 +33,6 @@ void MainWindow::startServer() {
     }
 }
 void MainWindow::stopServer() {
-    server->stop();
     delete server;
     server = NULL;
 }

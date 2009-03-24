@@ -20,11 +20,21 @@ void Server::start()
     if(! listen(QHostAddress::Any, port))
     {
         emit error("Can't start Server");
+    } else {
+        emit error("Server started");
     }
 }
 
 void Server::stop()
-{ // to be written
+{
+    QMutableListIterator<ServerConnectionThread *> it(connections);
+    while(it.hasNext())
+    {
+        ServerConnectionThread * conn = it.next();
+        it.remove();
+        delete conn;
+    }
+    close();
 }
 
 
@@ -36,7 +46,7 @@ void Server::incomingConnection(int handle)
         ServerConnectionThread * conn = new ServerConnectionThread(this, handle);
         connections.append(conn);
         connect(conn, SIGNAL(finished()), this, SLOT(findDead()));
-        connect(conn, SIGNAL(clientSends(const QString &)), this, SLOT(propagate(const QString &)));
+        connect(conn, SIGNAL(clientSends(QString)), this, SLOT(propagate(QString)));
         conn->start();
     } else {
         // telling client to get lost
