@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 
-class Server;
+class ServerThread;
 class QTextEdit;
 
 namespace Ui
@@ -23,14 +23,12 @@ public slots:
     void startServer();
     void stopServer();
 
-    void print(const QString & message);
-
 signals:
     void sendToAll(const QString & message);
 
 private:
     Ui::MainWindowClass *ui;
-    Server * server;
+    ServerThread * serverThread;
     QTextEdit * console;
 };
 

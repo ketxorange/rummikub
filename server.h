@@ -10,14 +10,14 @@ class Server : public QTcpServer
 {
     Q_OBJECT
 public:
-    Server(QObject * parent = NULL, int port = 7890);
+    Server(int port, int roundTime, QObject * parent = NULL);
     ~Server();
 
 public slots:
     void start();
     void stop();
     // send to all
-    void propagate(const QString &);
+    void propagate(const QString &, int clientHandle);
     // delete dead connection from list
     void findDead();
 
@@ -30,7 +30,7 @@ protected:
     void incomingConnection(int handle);
 
 private:
-    int port;
+    int port, roundTime;
     QList<ServerConnectionThread *> connections;
 };
 

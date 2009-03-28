@@ -18,7 +18,7 @@ public slots:
     void tellClient(const QString &);
 
 signals:
-    void clientSends(const QString &);
+    void clientSends(const QString &, int clientHandle);
     void error(const QString &);
     
 private:

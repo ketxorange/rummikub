@@ -6,8 +6,8 @@
 #include <QMutableListIterator>
 #include <QTcpSocket>
 
-Server::Server(QObject * parent, int port)
-        : QTcpServer(parent), port(port)
+Server::Server(int port, int roundTime, QObject * parent)
+        : QTcpServer(parent), port(port), roundTime(roundTime)
 {}
 
 Server::~Server()
@@ -34,6 +34,7 @@ void Server::stop()
         it.remove();
         delete conn;
     }
+    emit error("Server stopped");
     close();
 }
 
@@ -46,7 +47,7 @@ void Server::incomingConnection(int handle)
         ServerConnectionThread * conn = new ServerConnectionThread(this, handle);
         connections.append(conn);
         connect(conn, SIGNAL(finished()), this, SLOT(findDead()));
-        connect(conn, SIGNAL(clientSends(QString)), this, SLOT(propagate(QString)));
+        connect(conn, SIGNAL(clientSends(QString, int)), this, SLOT(propagate(QString, int)));
         conn->start();
     } else {
         // telling client to get lost
@@ -58,12 +59,16 @@ void Server::incomingConnection(int handle)
     }
 }
 
-void Server::propagate(const QString & message)
+void Server::propagate(const QString & message, int clientHandle)
 {
     QListIterator<ServerConnectionThread *> it(connections);
     while(it.hasNext())
     {
-        it.next()->tellClient(message);
+        ServerConnectionThread * thr = it.next();
+        if(thr->getHandle() == clientHandle)
+            thr->tellClient("FROM YOU: " + message);
+        else
+            thr->tellClient(QString("FROM %1: %2").arg(clientHandle).arg(message));
     }
 }
 

@@ -33,7 +33,7 @@ void ServerConnectionThread::run()
         {
             // TODO: use text codec to convert from utf8
             // maybe not necessary
-            emit clientSends(QString(socket.readAll()));
+            emit clientSends(QString(socket.readAll()), handle);
         }
 
         while(! queue.empty())
