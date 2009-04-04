@@ -34,13 +34,34 @@ void Block::move(BlockContainer *newParent)
   */
 bool Block::operator<(Block & b1)
 {
-    return (getColor() == b1.getColor()) && (getValue() < b1.getValue());
+    return (getValue() < b1.getValue());
 }
 
+bool Block::operator==(Block & b1)
+{
+    return (getColor() <= b1.getColor()) && (getValue() < b1.getValue());
+}
+
+
 /**
-  accessor used to set block parent
+  setter used to set block parent
   */
 void Block::setBlockParent(BlockContainer *bp)
 {
     this->blockParent=bp;
+}
+
+QString Block::toString()
+{
+    QString toRet = QString::number(value);
+    if(color == BLACK)
+        toRet += ";K";
+    if(color == BLUE)
+        toRet += ";B";
+    if(color == RED)
+        toRet += ";R";
+    if(color == ORANGE)
+        toRet += ";O";
+
+    return toRet;
 }

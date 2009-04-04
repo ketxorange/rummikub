@@ -13,6 +13,7 @@ BlockContainer::~BlockContainer()
     while(it != blockList.end())
     {
         delete *it;
+        it++;
     }
 }
 
@@ -24,13 +25,36 @@ void BlockContainer::add(Block *b)
     QList<Block*>::Iterator it=blockList.begin();
     while(it != blockList.end())
     {
-        if(*(*it) < *b)
-            it++;
+        if((*(*(it))).getColor() == (*b).getColor())
+        {
+            if((*(*(it))).getValue() >= (*b).getValue())
+                break;
+            else
+                it++;
+        }
         else
-            break;
+            it++;
     }
+
     b->setBlockParent(this);
-    blockList.insert(it, b);
+    blockList.insert(it++,b);
+    qSort(blockList);
+}
+
+void BlockContainer::add(QString block)
+{
+    QStringList bl = block.split(";");
+    blockColor b;
+    if(bl[1] == "B")
+        b=BLUE;
+    else if(bl[1] == "R")
+        b=RED;
+    else if(bl[1] == "O")
+        b=ORANGE;
+    else
+        b=BLACK;
+
+    this->add(new Block(bl[0].toInt(), b, this, false));
 }
 
 /**
@@ -67,22 +91,29 @@ void BlockContainer::debugPrint()
 {
 
     QList<Block*>::Iterator it = blockList.begin();
-    qDebug() << blockList.size();
+    qDebug() << "Size: " + QString::number(blockList.size());
+    int i=0;
     while(it != blockList.end())
     {
-        QString blockStr;
+        QString blockStr = QString::number(i);
         if((*it)->getColor() == BLUE)
-            blockStr = "(Blue)";
+            blockStr += "(Blue)";
         if((*it)->getColor() == BLACK)
-            blockStr = "(Black)";
+            blockStr += "(Black)";
         if((*it)->getColor() == RED)
-            blockStr = "(Red)";
+            blockStr += "(Red)";
         if((*it)->getColor() == ORANGE)
-            blockStr = "(Orange)";
+            blockStr += "(Orange)";
         QString val;
         val.setNum((*it)->getValue() );
         qDebug() << blockStr+" "+val;
 
         it++;
+        i++;
     }
+}
+
+int BlockContainer::size()
+{
+    return blockList.length();
 }

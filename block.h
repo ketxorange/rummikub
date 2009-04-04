@@ -10,7 +10,7 @@ class BlockContainer;
 * type holding block colour
 */
 
-enum blockColor { RED, BLUE, BLACK, ORANGE };
+enum blockColor { RED=0, BLUE=1, BLACK=2, ORANGE=3 };
 
 
 /**
@@ -26,8 +26,10 @@ public:
 
     void move(BlockContainer *);
     bool operator<(Block &);
+    bool operator==(Block &);
 
     void setBlockParent(BlockContainer *);
+    QString toString();
 
 private:
     int value;

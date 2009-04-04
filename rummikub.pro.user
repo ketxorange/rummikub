@@ -56,13 +56,13 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ZZ4jRKIv4c,guid=09007644c9644e1685bf907f49abb1ef</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-MfAia1O8Dy,guid=99cc5a3fbe312bb0d4c6de4549c65706</value>
     <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0</value>
     <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
     <value type="QString" >GS_LIB=/home/orbit/.fonts</value>
-    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/orbit/.gtkrc-2.0::/home/orbit/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/orbit/.gtkrc-2.0:/home/orbit/.gtkrc-2.0-kde4:/home/orbit/.kde4/share/config/gtkrc-2.0</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/orbit/.gtkrc::/home/orbit/.kde4/share/config/gtkrc</value>
     <value type="QString" >G_BROKEN_FILENAMES=1</value>
     <value type="QString" >HISTCONTROL=erasedups</value>
@@ -82,7 +82,6 @@
     <value type="QString" >LC_COLLATE=C</value>
     <value type="QString" >LESS=-R</value>
     <value type="QString" >LOGNAME=orbit</value>
-    <value type="QString" >MALLOC_CHECK_=2</value>
     <value type="QString" >MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins:/opt/mozilla/lib/plugins</value>
     <value type="QString" >NXDIR=/opt/NX</value>
     <value type="QString" >OOO_FORCE_DESKTOP=gnome</value>
@@ -94,7 +93,7 @@
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/orbit/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
     <value type="QString" >QT_XFT=true</value>
-    <value type="QString" >SESSION_MANAGER=local/0r81t:@/tmp/.ICE-unix/6265,unix/0r81t:/tmp/.ICE-unix/6265</value>
+    <value type="QString" >SESSION_MANAGER=local/0r81t:@/tmp/.ICE-unix/7783,unix/0r81t:/tmp/.ICE-unix/7783</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >USER=orbit</value>
@@ -105,7 +104,7 @@
     <value type="QString" >XDG_CONFIG_HOME=/home/orbit/.config</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/opt/kde/share</value>
     <value type="QString" >XDG_DATA_HOME=/home/orbit/.local/share</value>
-    <value type="QString" >XDG_SESSION_COOKIE=cf75d6f8184dcfba2760554648932dd5-1235988974.730424-1310032268</value>
+    <value type="QString" >XDG_SESSION_COOKIE=cf75d6f8184dcfba2760554648932dd5-1237735173.809754-279811249</value>
     <value type="QString" >XDM_MANAGED=method=classic</value>
     <value type="QString" >_=/usr/bin/kdeinit4</value>
    </valuelist>
@@ -128,13 +127,13 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ZZ4jRKIv4c,guid=09007644c9644e1685bf907f49abb1ef</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-MfAia1O8Dy,guid=99cc5a3fbe312bb0d4c6de4549c65706</value>
     <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0</value>
     <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
     <value type="QString" >GS_LIB=/home/orbit/.fonts</value>
-    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/orbit/.gtkrc-2.0::/home/orbit/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/orbit/.gtkrc-2.0:/home/orbit/.gtkrc-2.0-kde4:/home/orbit/.kde4/share/config/gtkrc-2.0</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/orbit/.gtkrc::/home/orbit/.kde4/share/config/gtkrc</value>
     <value type="QString" >G_BROKEN_FILENAMES=1</value>
     <value type="QString" >HISTCONTROL=erasedups</value>
@@ -154,7 +153,6 @@
     <value type="QString" >LC_COLLATE=C</value>
     <value type="QString" >LESS=-R</value>
     <value type="QString" >LOGNAME=orbit</value>
-    <value type="QString" >MALLOC_CHECK_=2</value>
     <value type="QString" >MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins:/opt/mozilla/lib/plugins</value>
     <value type="QString" >NXDIR=/opt/NX</value>
     <value type="QString" >OOO_FORCE_DESKTOP=gnome</value>
@@ -166,7 +164,7 @@
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/orbit/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
     <value type="QString" >QT_XFT=true</value>
-    <value type="QString" >SESSION_MANAGER=local/0r81t:@/tmp/.ICE-unix/6265,unix/0r81t:/tmp/.ICE-unix/6265</value>
+    <value type="QString" >SESSION_MANAGER=local/0r81t:@/tmp/.ICE-unix/7783,unix/0r81t:/tmp/.ICE-unix/7783</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >USER=orbit</value>
@@ -177,7 +175,7 @@
     <value type="QString" >XDG_CONFIG_HOME=/home/orbit/.config</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/opt/kde/share</value>
     <value type="QString" >XDG_DATA_HOME=/home/orbit/.local/share</value>
-    <value type="QString" >XDG_SESSION_COOKIE=cf75d6f8184dcfba2760554648932dd5-1235988974.730424-1310032268</value>
+    <value type="QString" >XDG_SESSION_COOKIE=cf75d6f8184dcfba2760554648932dd5-1237735173.809754-279811249</value>
     <value type="QString" >XDM_MANAGED=method=classic</value>
     <value type="QString" >_=/usr/bin/kdeinit4</value>
    </valuelist>

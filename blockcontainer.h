@@ -6,6 +6,8 @@
 #include <QListIterator>
 #include "block.h"
 #include <QDebug>
+#include <QString>
+#include <QStringList>
 
 class Block;
 
@@ -18,10 +20,12 @@ public:
 
 public slots:
     void add(Block*);
+    void add(QString);
     void remove(Block*);
     void moveTo(BlockContainer*, Block*);
     void moveTo(BlockContainer*, int);
     bool isEmpty();
+    int size();
 
     void debugPrint();
 protected:
