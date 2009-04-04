@@ -25,20 +25,13 @@ void BlockContainer::add(Block *b)
     QList<Block*>::Iterator it=blockList.begin();
     while(it != blockList.end())
     {
-        if((*(*(it))).getColor() == (*b).getColor())
-        {
-            if((*(*(it))).getValue() >= (*b).getValue())
-                break;
-            else
-                it++;
-        }
-        else
+        if((*(*it)) < *b)
             it++;
+        else
+            break;
     }
-
     b->setBlockParent(this);
-    blockList.insert(it++,b);
-    qSort(blockList);
+    blockList.insert(it, b);
 }
 
 void BlockContainer::add(QString block)
@@ -115,5 +108,5 @@ void BlockContainer::debugPrint()
 
 int BlockContainer::size()
 {
-    return blockList.length();
+    return blockList.size();
 }

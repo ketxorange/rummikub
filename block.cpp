@@ -34,7 +34,12 @@ void Block::move(BlockContainer *newParent)
   */
 bool Block::operator<(Block & b1)
 {
-    return (getValue() < b1.getValue());
+    if(this->color == b1.color)
+        return this->value<b1.getValue();
+    else
+        return this->color < b1.getColor();
+
+
 }
 
 bool Block::operator==(Block & b1)
