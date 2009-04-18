@@ -1,49 +1,91 @@
 #include "server.h"
+#include "serverconnectionthread.h"
 
 #include <QDebug>
 #include <QMessageBox>
+#include <QMutableListIterator>
+#include <QTcpSocket>
 
-
-Server::Server()
-        : QThread(), tcpServer(NULL)
+Server::Server(int port, int roundTime, QObject * parent)
+        : QTcpServer(parent), port(port), roundTime(roundTime)
 {}
 
-void Server::run() {
-    tcpServer = new QTcpServer(this);
-    tcpServer->listen(QHostAddress::Any, 7890);
-    connect(tcpServer, SIGNAL(newConnection()), this, SLOT(acceptConnection()));
-
-    exec();
+Server::~Server()
+{
+    this->stop();
 }
 
-void Server::acceptConnection() {
-    if(sockets.count() < 4) {
-        QTcpSocket * socket = tcpServer->nextPendingConnection();
-        emit error(QString("setting up new connection: %1").arg((int)socket));
-        sockets << socket;
-        connect(socket, SIGNAL(readyRead()), this, SLOT(processRead()));
-        connect(socket, SIGNAL(disconnected()), this, SLOT(deleteConnection()));
-        connect(socket, SIGNAL(disconnected()), socket, SLOT(deleteLater()));
-
-        socket->write(QString("ACCEPT\n").toAscii());
+void Server::start()
+{
+    if(! listen(QHostAddress::Any, port))
+    {
+        emit error("Can't start Server");
     } else {
-        QTcpSocket * socket = tcpServer->nextPendingConnection();
-        emit error("To much connections");
-        socket->write(QString("GET LOST\n").toAscii());
-        connect(socket, SIGNAL(disconnected()), socket, SLOT(deleteLater()));
-        //socket->disconnectFromHost();
+        emit error("Server started");
     }
 }
 
-void Server::processRead() {
-    // gets sender of signal
-    QTcpSocket * sock = qobject_cast<QTcpSocket * >(this->sender());
-    emit error(QString("from: %1 :: %2").arg((int)sock).arg(QString(sock->readAll())));
+void Server::stop()
+{
+    QMutableListIterator<ServerConnectionThread *> it(connections);
+    while(it.hasNext())
+    {
+        ServerConnectionThread * conn = it.next();
+        it.remove();
+        delete conn;
+    }
+    emit error("Server stopped");
+    close();
 }
 
-void Server::deleteConnection() {
-    QTcpSocket * sock = qobject_cast<QTcpSocket * >(this->sender());
-    sockets.removeAll(sock);
-    emit error(QString("%1 is disconnecting.").arg((int)sock));
-    //if(sock) delete sock;
+
+void Server::incomingConnection(int handle)
+{
+    qDebug() << "New Connection: " << handle;
+    if(connections.size() < 4)
+    {
+        ServerConnectionThread * conn = new ServerConnectionThread(this, handle);
+        connections.append(conn);
+        connect(conn, SIGNAL(finished()), this, SLOT(findDead()));
+        connect(conn, SIGNAL(clientSends(QString, int)), this, SLOT(propagate(QString, int)));
+        conn->start();
+    } else {
+        // telling client to get lost
+        QTcpSocket socket(this);
+        socket.setSocketDescriptor(handle);
+        socket.write("GET_LOST");
+        socket.waitForBytesWritten(200);
+        socket.close();
+    }
+}
+
+void Server::propagate(const QString & message, int clientHandle)
+{
+    QListIterator<ServerConnectionThread *> it(connections);
+    while(it.hasNext())
+    {
+        ServerConnectionThread * thr = it.next();
+        if(thr->getHandle() == clientHandle)
+            thr->tellClient("FROM YOU: " + message);
+        else
+            thr->tellClient(QString("FROM %1: %2").arg(clientHandle).arg(message));
+    }
+}
+
+void Server::findDead()
+{
+    /* bardzo mozliwe, ze mozna to napisac bez przeszukiwania calej listy
+       ale to tylko 4 elementy */
+    qDebug() << "Finding Dead";
+    QMutableListIterator<ServerConnectionThread *> it(connections);
+    while(it.hasNext())
+    {
+        ServerConnectionThread * conn = it.next();
+        if(conn->isFinished())
+        {
+            it.remove();
+            qDebug() << "Found Dead: " << conn->getHandle();
+            delete conn;
+        }
+    }
 }

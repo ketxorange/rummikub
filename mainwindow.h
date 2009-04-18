@@ -1,7 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QtGui/QMainWindow>
+#include <QMainWindow>
+
+class ServerThread;
+class QTextEdit;
 
 namespace Ui
 {
@@ -20,14 +23,13 @@ public slots:
     void startServer();
     void stopServer();
 
-    void print(const QString & message);
-
 signals:
     void sendToAll(const QString & message);
 
 private:
     Ui::MainWindowClass *ui;
-    
+    ServerThread * serverThread;
+    QTextEdit * console;
 };
 
 #endif // MAINWINDOW_H
